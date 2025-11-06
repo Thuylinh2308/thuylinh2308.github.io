@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create product list with CSS3</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            align-items: flex-start;
+            font-family: Arial, sans-serif;
+        }
+
+        .Product {
+            text-align: center;
+            width: 150px;
+            margin: 0px 20px;
+            cursor: pointer;
+        }
+
+        .Product img {
+            width: 150px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px #aaa;
+            object-fit: cover; 
+        }
+
+        .ProductDetails {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .ProductName {
+            font-weight: bold;
+            display: block;
+        }
+
+        .ProductPrice {
+            display: block;
+            font-style: italic;
+        }
+
+        .ProductPrice:before {
+            content: "- ";
+        }
+
+        .Product:hover .ProductDetails {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="Product">
+        <img src="Rose.jpg" alt="Rose">
+        <div class="ProductDetails">
+            <span class="ProductName">Rose</span>
+            <span class="ProductPrice">1.5$</span>
+        </div>
+    </div>
+
+    <div class="Product">
+        <img src="Tulip.jpg" alt="Tulip">
+        <div class="ProductDetails">
+            <span class="ProductName">Tulip</span>
+            <span class="ProductPrice">2.0$</span>
+        </div>
+    </div>
+
+    <div class="Product">
+        <img src="daisy.jpg" alt="Daisy">
+        <div class="ProductDetails">
+            <span class="ProductName">Lili</span>
+            <span class="ProductPrice">1.0$</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+p {
+            color: palevioletred;
+        }
+h1 {
+            color: rgb(51, 51, 218);
+        } 
+dac-biet {
+            font-weight: bold;
+            color: red;
+        }               
+
+        .gach-ngang {
+            text-decoration: line-through;
+        }
