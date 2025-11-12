@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ về Phím tắt (Bản sửa lỗi)</title>
+    
+    <style>
+        @charset "utf-8";
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e6abab;
+        }
+        .menu ul{
+            list-style: disc;
+            box-shadow: 5px 5px 10px #000;
+            border: 1px solid #000;
+            width: 148px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .menu li{
+            padding: 5px;
+            width: 138px;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+        .menu li:hover { /* Sửa lỗi: bỏ dấu cách */
+            background-color: #ffff99;
+        }
+        .menu li.active {
+            color: red;
+            font-weight: bold;
+        }   
+
+        /* === CSS CHO FORM (Thêm vào cho đẹp) === */
+        form {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #8fe4c8;
+        }
+        form div {
+            margin-bottom: 10px;
+        }
+        form label {
+            margin-right: 5px;
+        }
+        input[type="submit"], input[type="reset"], button[type="button"] {
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background: #4CAF50; /* Xanh */
+            color: white;
+            border: none;
+        }
+         input[type="reset"] {
+            background: #f44336; /* Đỏ */
+            color: white;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CV của Linh</h1>
+    
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+        
+        <div>
+            Sở thích:
+            <input type="checkbox" id="check1" name="hobby1" value="Music" accesskey="M">
+            <label for="check1">Âm nhạc (Alt+M)</label>
+            
+            <input type="checkbox" id="check2" name="hobby2" value="Sport">
+            <label for="check2">Thể thao</label>
+        </div>
+        
+        <div>
+            Giới tính:
+            <input type="radio" id="radio1" name="gender" value="male" accesskey="N">
+            <label for="radio1">Nam (Alt+N)</label>
+
+            <input type="radio" id="radio2" name="gender" value="female">
+            <label for="radio2">Nữ</label>
+        </div>
+        
+        <div>
+            <label for="city">Thành phố (Alt+C):</label>
+            <select id="city" name="user_city" accesskey="C">
+                <option value="hanoi">Hà Nội</option>
+                <option value="danang">Đà Nẵng</option>
+                <option value="hcm">TP. Hồ Chí Minh</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="avatar">Chọn ảnh (Alt+F):</label>
+            <input type="file" id="avatar" name="user_avatar" accesskey="F">
+        </div>
+        
+        <input type="hidden" name="user_id" value="12345">
+        <br>
+
+        <button type="button" accesskey="B">Nhấn thử (Alt+B)</button>
+        <input type="submit" value="Gửi đi (Alt+S)" accesskey="S">
+        <input type="reset" value="Làm lại (Alt+R)" accesskey="R">
+
+    </form>
+
+</body>
+</html>
