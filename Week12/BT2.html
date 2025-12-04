@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="getBrowserInfo()">
+
+<h1>Thông tin Trình duyệt của bạn</h1>
+<h2>Sử dụng đối tượng Navigator</h2>
+
+<p id="demo" style="font-size: 18px; line-height: 1.6;"></p>
+
+<script>
+function getBrowserInfo() {
+  let text = "";
+
+  // 1. Kiểm tra Cookie
+  if (navigator.cookieEnabled == true) {
+    text += "✅ <b>Cookie:</b> Đang bật<br>";
+  } else {
+    text += "❌ <b>Cookie:</b> Đang tắt<br>";
+  }
+
+  // 2. Kiểm tra Ngôn ngữ trình duyệt
+  text += "🌍 <b>Ngôn ngữ:</b> " + navigator.language + "<br>";
+
+  // 3. Kiểm tra Trạng thái kết nối mạng
+  text += "g📡 <b>Trạng thái mạng:</b> " + (navigator.onLine ? "Đang online" : "Mất mạng") + "<br>";
+
+  // 4. Kiểm tra thông tin User Agent (Chi tiết trình duyệt)
+  text += "ℹ️ <b>Chi tiết hệ thống:</b> " + navigator.userAgent;
+
+  // Hiển thị kết quả ra thẻ p
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

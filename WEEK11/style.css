@@ -1,0 +1,76 @@
+/* Áp dụng cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Màu nền xám nhạt cho trang */
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    min-height: 100vh; /* Đảm bảo trang chiếm ít nhất toàn bộ chiều cao */
+    margin: 0;
+}
+
+/* Kiểu dáng cho bảng chứa máy tính */
+table {
+    border-collapse: collapse; /* Gộp viền của bảng */
+    background-color: #ffffff; /* Nền trắng cho máy tính */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bo tròn các góc */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ đẹp mắt */
+    padding: 15px; /* Thêm khoảng cách bên trong */
+}
+
+/* Kiểu dáng cho các ô trong bảng (td) */
+td {
+    padding: 12px; /* Thêm khoảng đệm cho các ô */
+    vertical-align: middle;
+}
+
+/* Kiểu dáng cho các nhãn (Number A, Number B, v.v.) */
+td[align="right"] {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Kiểu dáng chung cho các ô nhập liệu và ô chọn */
+input[type="text"],
+select {
+    width: 220px; /* Độ rộng cố định */
+    padding: 10px; /* Đệm bên trong ô input */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bo tròn góc ô input */
+    font-size: 1rem; /* Cỡ chữ */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+}
+
+/* Kiểu dáng riêng cho ô kết quả (Result) */
+input[name="txtr"] {
+    background-color: #eee; /* Màu nền xám nhạt vì nó chỉ đọc */
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #40c725; /* Màu chữ kết quả là màu xanh đậm */
+}
+
+/* Kiểu dáng cho nút "Calculate" */
+input[type="button"] {
+    width: 100%; /* Nút chiếm toàn bộ độ rộng của ô */
+    padding: 12px;
+    background-color: #d44e91; /* Màu nền xanh dương */
+    color: white; /* Chữ trắng */
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Biến thành con trỏ tay khi di chuột */
+    transition: background-color 0.2s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+/* Hiệu ứng khi di chuột qua nút */
+input[type="button"]:hover {
+    background-color: #c23392; /* Màu xanh đậm hơn */
+}
+
+/* Hiệu ứng khi nhấp chuột vào nút */
+input[type="button"]:active {
+    background-color: #004494;
+    transform: translateY(1px); /* Nút lún xuống một chút */
+}
